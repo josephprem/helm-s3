@@ -352,14 +352,6 @@ workflows:
           filters:
             branches:
               only: csfpops
-      - docker-helm-3_6:
-          requires:
-            - dep
-            - test-unit
-            - test-integration-helm-3_6
-          filters:
-            branches:
-              only: csfpops
       - test-install:
           requires:
             - test-integration-helm-2_17
